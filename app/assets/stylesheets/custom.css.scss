@@ -1,0 +1,65 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+.navbar {
+
+  background-color: #000000 !important;
+  
+  }
+  
+.nav-link {
+  color :white !important;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#home-container {
+  margin-top: 25px;
+}
+
+body .jumbotron {
+  margin-bottom: 0px;
+  position: relative;
+  background: none;
+  color: black;
+}
+
+.jumbotron .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: asset-url('jumbo3.jpg');
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+   filter: blur(2px);
+   z-index: -1;
+   height: 450px;
+}
+
+/* Sticky Footer Classes */
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+/* Other Classes for Page Styling */
+
+body {
+  background-color: lightgrey;
+ 
+}
+
