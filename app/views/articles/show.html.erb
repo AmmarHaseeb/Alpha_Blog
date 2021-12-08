@@ -4,7 +4,7 @@
       <div class= "col-8 mt-4">
         <div class="card text-center shadow mb-5 bg-white rounded">
           <div class="card-header font-italic">
-            by Ammar Haseeb
+            by <%= @article.user.username %>
           </div>
           <div class="card-body">
             <div class="card-text text-left"><%= simple_format(@article.description) %></div>
@@ -14,7 +14,7 @@
           <div class="card-footer text-muted">
             <small>
               Created <%= time_ago_in_words(@article.created_at) %> ago,
-              Edited <%= time_ago_in_words(@article.updated_at) %>ago
+              Edited <%= time_ago_in_words(@article.updated_at) %> ago
             </small>
           </div>
         </div>
