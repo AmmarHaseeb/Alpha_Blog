@@ -9,5 +9,9 @@ validates :email, presence: true,
                     uniqueness: { case_sensitive: false }, 
                     length: { maximum: 125},
                     format: { with: VALID_EMAIL_REGEX }
+<<<<<<< HEAD
 has_secure_password
+=======
+has_secure_password      
+>>>>>>> users-signup
 end

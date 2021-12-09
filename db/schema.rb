@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_12_08_060326) do
+=======
+ActiveRecord::Schema.define(version: 2021_12_09_061049) do
+>>>>>>> users-signup
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
