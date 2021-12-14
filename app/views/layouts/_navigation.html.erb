@@ -15,26 +15,34 @@
             Articles
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <%= link_to "Create new article", new_article_path, class: "dropdown-item" %></a>
+            <% if logged_in? %>
+              <%= link_to "Create new article", new_article_path, class: "dropdown-item" %></a>
+            <% end %>
             <%= link_to "View Articles", articles_path, class: "dropdown-item" %></a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
         </li>
         <% if logged_in? %>
-          <li class="nav-item">
-            <%= link_to current_user.username, user_path(current_user), class: "nav-link" %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Profile [<%= current_user.username %>]
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "View your Profile", user_path(current_user), class: "dropdown-item" %></a>
+              <%= link_to "Edit your Profile", edit_user_path(current_user), class: "dropdown-item" %></a>
+            </div>
           </li>
-          <li class="nav-item">
-            <%= link_to "Log out", logout_path, class: "nav-link nav-link btn btn-outline-danger", method: :delete %>
-          </li>
-        <% else %>
-          <li class="nav-item">
-            <%= link_to "Log in", login_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Sign up", signup_path, class: "nav-link" %>
-          </li>
+            <li class="nav-item">
+              <%= link_to "Log out", logout_path, class: "nav-link nav-link btn btn-outline-danger", method: :delete %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to "Log in", login_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Sign up", signup_path, class: "nav-link" %>
+            </li>
         <% end %>
       </ul>
       <form class="form-inline my-2 my-lg-0">
